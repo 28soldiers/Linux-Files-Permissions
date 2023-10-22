@@ -1,0 +1,80 @@
+researcher2@1a11feec0c46:~/projects$ cd /home/researcher2/projects
+researcher2@1a11feec0c46:~/projects$ ls -l /home/researcher2/projects
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+
+researcher2@1a11feec0c46:~/projects$ ls -la /home/researcher2/projects
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 17:51 .
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 19:03 ..
+-rw--w---- 1 researcher2 research_team   46 Oct 20 17:51 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+
+researcher2@1a11feec0c46:~/projects$ ls -l /home/researcher2/projects
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-rw- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+
+researcher2@1a11feec0c46:~/projects$ chmod o-w project_k.txt
+researcher2@1a11feec0c46:~/projects$ ls -l /home/researcher2/projects
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw-r----- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+
+researcher2@1a11feec0c46:~/projects$ chmod g-r project_m.txt
+researcher2@1a11feec0c46:~/projects$ ls -l /home/researcher2/projects
+total 20
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw------- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+
+researcher2@1a11feec0c46:~/projects$ ls -la /home/researcher2/projects
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 17:51 .
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 19:03 ..
+-rw--w---- 1 researcher2 research_team   46 Oct 20 17:51 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw------- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+
+researcher2@1a11feec0c46:~/projects$ chmod u-w,g-w,g+r .project_x.txt
+researcher2@1a11feec0c46:~/projects$ ls -la /home/researcher2/projects
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 17:51 .
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 19:03 ..
+-r--r----- 1 researcher2 research_team   46 Oct 20 17:51 .project_x.txt
+drwx--x--- 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw------- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+
+researcher2@1a11feec0c46:~/projects$ chmod g-x drafts
+researcher2@1a11feec0c46:~/projects$ ls -la /home/researcher2/projects
+total 32
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 17:51 .
+drwxr-xr-x 3 researcher2 research_team 4096 Oct 20 19:03 ..
+-r--r----- 1 researcher2 research_team   46 Oct 20 17:51 .project_x.txt
+drwx------ 2 researcher2 research_team 4096 Oct 20 17:51 drafts
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_k.txt
+-rw------- 1 researcher2 research_team   46 Oct 20 17:51 project_m.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_r.txt
+-rw-rw-r-- 1 researcher2 research_team   46 Oct 20 17:51 project_t.txt
+researcher2@1a11feec0c46:~/projects$ 
